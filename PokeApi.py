@@ -61,6 +61,7 @@ def mostrar_imagen(url):
 root = tk.Tk()
 root.title('PokeAPI')
 root.geometry('400x500')
+root.configure( bg="#d22b2b")
 
 try:
     fuente_pokemon = font.Font(file="Arial", size=12)
@@ -77,11 +78,11 @@ boton = tk.Button(root, text='Buscar Pokemon', command=buscar_pokemon , font=fue
 boton.pack(pady=10)
 
 #* Mostrar resultados
-resultado = tk.Text(root, height=10, width= 40)
+resultado = tk.Text(root, height=10, width= 40,font=fuente_pokemon ,bg= '#43cbf8' )
 resultado.pack(pady= 10)
 
 #* Mostrar imagen
-image_label = tk.Label(root)
+image_label = tk.Label(root,  bg= "#d22b2b")
 image_label.pack(pady=5)
 
 root.mainloop()    
